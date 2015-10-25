@@ -20,13 +20,12 @@ function getPieceAt(row, col) {
 }
 //Sets a piece to null if it's "R" or "B". Else leaves it as null.//
 
-function erase(n) {
-  n = null;
-}
-//Set a cell to null//
-
 function clearBoard() {
-  checkerboard.map(erase);
+  for (var i = 0; i < checkerboard[0].length; i++) {
+    for (var j = 0; j < checkerboard.length; j ++) {
+      checkerboard[i][j] = null;
+    }
+  }
     return checkerboard;
 }
 //Clears board of all piece, and sets them to null.//
